@@ -10,7 +10,7 @@ library(datasets)
 
 ### DATOS ###
 
-setwd("D:\\Desktop\\Ingeniería Civil\\Semilleros-Investigación\\Finanzas\\Semestre 2\\Risk Theory\\Homework 2")
+setwd("D:\\Desktop\\IngenierÃ­a Civil\\Semilleros-InvestigaciÃ³n\\Finanzas\\Semestre 2\\Risk Theory\\Homework 2")
 
 PFDAVVND <- read.xlsx("Acciones_BDI.xlsx", sheet=1, colNames=T)
 PFDAVVND[,1] <- convertToDate(PFDAVVND[,1])
@@ -86,20 +86,20 @@ ggsave("ISA_GR.png", plot=ISA.GR, dpi=600)
 
 ## DENSIDADES
 
-PFDAVVND.GD <- ggplot(Returns, aes(x=Returns[,2])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÓN DE LOS LOG-RETORNOS PREFERENCIAL DAVIVIENDA") +
+PFDAVVND.GD <- ggplot(Returns, aes(x=Returns[,2])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÃ“N DE LOS LOG-RETORNOS PREFERENCIAL DAVIVIENDA") +
                 theme(plot.title = element_text(size=14, face="bold", hjust=0.5),
                       axis.title.x = element_text(size=11, face="bold"),
                       axis.title.y = element_text(size=11, face="bold")) 
 ggsave("PFDAVVND_GD.png", plot=PFDAVVND.GD, dpi=600)
 
-BOGOTA.GD <- ggplot(Returns, aes(x=Returns[,3])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÓN DE LOS LOG-RETORNOS BANCO BOGOTA") +
+BOGOTA.GD <- ggplot(Returns, aes(x=Returns[,3])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÃ“N DE LOS LOG-RETORNOS BANCO BOGOTA") +
               theme(plot.title = element_text(size=14, face="bold", hjust=0.5),
                     axis.title.x = element_text(size=11, face="bold"),
                     axis.title.y = element_text(size=11, face="bold")) 
 ggsave("BOGOTA_GD.png", plot=BOGOTA.GD, dpi=600)
 
 
-ISA.GD <- ggplot(Returns, aes(x=Returns[,4])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÓN DE LOS LOG-RETORNOS ISA") +
+ISA.GD <- ggplot(Returns, aes(x=Returns[,4])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÃ“N DE LOS LOG-RETORNOS ISA") +
             theme(plot.title = element_text(size=14, face="bold", hjust=0.5),
                   axis.title.x = element_text(size=11, face="bold"),
                   axis.title.y = element_text(size=11, face="bold")) 
@@ -178,20 +178,20 @@ ggsave("ISA_GRM.png", plot=ISA.GRM, dpi=600)
 
 ## DENSIDADES
 
-PFDAVVND.GDM <- ggplot(ReturnsM, aes(x=ReturnsM[,2])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÓN DE LOS LOG-RETORNOS MENSUALES PREFERENCIAL DAVIVIENDA") +
+PFDAVVND.GDM <- ggplot(ReturnsM, aes(x=ReturnsM[,2])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÃ“N DE LOS LOG-RETORNOS MENSUALES PREFERENCIAL DAVIVIENDA") +
   theme(plot.title = element_text(size=14, face="bold", hjust=0.5),
         axis.title.x = element_text(size=11, face="bold"),
         axis.title.y = element_text(size=11, face="bold")) 
 ggsave("PFDAVVND_GDM.png", plot=PFDAVVND.GDM, dpi=600)
 
-BOGOTA.GDM <- ggplot(ReturnsM, aes(x=ReturnsM[,3])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÓN DE LOS LOG-RETORNOS MENSUALES BANCO BOGOTA") +
+BOGOTA.GDM <- ggplot(ReturnsM, aes(x=ReturnsM[,3])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÃ“N DE LOS LOG-RETORNOS MENSUALES BANCO BOGOTA") +
   theme(plot.title = element_text(size=14, face="bold", hjust=0.5),
         axis.title.x = element_text(size=11, face="bold"),
         axis.title.y = element_text(size=11, face="bold")) 
 ggsave("BOGOTA_GDM.png", plot=BOGOTA.GDM, dpi=600)
 
 
-ISA.GDM <- ggplot(ReturnsM, aes(x=ReturnsM[,4])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÓN DE LOS LOG-RETORNOS MENSUALES ISA") +
+ISA.GDM <- ggplot(ReturnsM, aes(x=ReturnsM[,4])) + geom_density(fill="gray") + xlab("Retorno") + ylab("Densidad") + ggtitle("DISTRIBUCIÃ“N DE LOS LOG-RETORNOS MENSUALES ISA") +
   theme(plot.title = element_text(size=14, face="bold", hjust=0.5),
         axis.title.x = element_text(size=11, face="bold"),
         axis.title.y = element_text(size=11, face="bold")) 
@@ -214,3 +214,5 @@ CORR23 <- cor(X[,c(2,3)])
 ACF12_A <- acf(abs(X[,c(1,2)]))
 ACF13_A <- acf(abs(X[,c(1,3)]))
 ACF23_A <- acf(abs(X[,c(2,3)]))
+
+###CHANGE #1
